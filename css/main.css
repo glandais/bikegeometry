@@ -1,0 +1,70 @@
+html,
+body {
+  margin: 0;
+  height: 100%;
+  -webkit-overscroll-behavior: contain;
+  -ms-overscroll-behavior: contain;
+  overscroll-behavior: contain;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  overflow: hidden;
+}
+
+#sidebar {
+  width: 250px;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #f1f1f1;
+  border: 1px solid #d3d3d3;
+  overflow: hidden;
+}
+
+#sidebar-header {
+  padding: 10px;
+  cursor: move;
+  z-index: 10;
+  background-color: #2196f3;
+  color: #fff;
+  display: flex;
+}
+
+#sidebar-header-title {
+  flex: 1;
+}
+
+#sidebar-header-button {
+  cursor: pointer;
+  flex: 0 0 20px;
+}
+
+#sidebar-content {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#sidebar input[type="range"] {
+  width: 240px;
+  pointer-events: none;
+}
+
+#sidebar input[type="range"]::-webkit-slider-thumb {
+  pointer-events: auto;
+}
+
+#sidebar input[type="range"]::-moz-range-thumb {
+  pointer-events: auto;
+}
+
+#main {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+#canvas {
+  overscroll-behavior: contain;
+}
