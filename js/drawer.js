@@ -26,7 +26,7 @@ class BikeGeometryDrawer {
     let ctx = this.ctx;
     let debug = this.state.debug;
     ctx.beginPath();
-    ctx.arc(x, y, r, 0, TWO_PI);
+    ctx.arc(x, y, r, 0, 2 * Math.PI);
     if (fill && !debug) {
       ctx.fill();
     }
@@ -113,6 +113,8 @@ class BikeGeometryDrawer {
     this.drawSegment(fd.bb, fd.c);
     this.drawSegment(fd.s, fd.c);
     this.drawSegment(fd.f, fd.c);
+    this.drawCircle(fd.r.x, fd.r.y, 336, false);
+    this.drawCircle(fd.f.x, fd.f.y, 336, false);
 
     ctx.restore();
 
